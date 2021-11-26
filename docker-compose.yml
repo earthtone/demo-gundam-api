@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api:/home/node/code
+      - /home/node/code/node_modules
+    links:
+      - db
+    environment:
+      MONGO_CONNECTION_STRING: mongodb://db:27017
+  db:
+    image: mongo:3
+    ports:
+      - "27017:27017"
+  # mongo_seed:
+  #   build: ./mongo_seed
+  #   links:
+  #     - db
