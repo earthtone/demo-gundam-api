@@ -6,6 +6,8 @@
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
     "hapi-pino": "^9.0.0",
-    "mongodb": "^4.2.0"
+    "hapi-plugin-websocket": "^2.3.7",
+    "mongodb": "^4.2.0",
+    "ws": "^8.3.0"
   }
 }

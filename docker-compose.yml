@@ -15,7 +15,7 @@ services:
     image: mongo:3
     ports:
       - "27017:27017"
-  # mongo_seed:
-  #   build: ./mongo_seed
-  #   links:
-  #     - db
+  mongo_seed:
+    build: ./mongo_seed
+    links:
+      - db
