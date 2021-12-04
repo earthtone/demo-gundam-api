@@ -15,7 +15,7 @@ async function start () {
   })
 
   await server.register({
-    plugin: require("hapi-pino")
+    plugin: require("hapi-pino"),
   })
 
   await server.register(require('hapi-plugin-websocket'))
